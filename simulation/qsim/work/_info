@@ -1,0 +1,75 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/intelFPGA_lite/18.1/UpDown/simulation/qsim
+vhard_block
+Z1 !s110 1544165887
+!i10b 1
+!s100 03O_GJ7EHG`gQ^4e8dm?31
+I_<=A=LWBRMenEM?g3ETm21
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1544165882
+Z4 8UpDown.vo
+Z5 FUpDown.vo
+L0 172
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1544165887.000000
+Z8 !s107 UpDown.vo|
+Z9 !s90 -work|work|UpDown.vo|
+!i113 1
+Z10 o-work work
+Z11 tCvgOpt 0
+vUpDown
+R1
+!i10b 1
+!s100 1[cnooe>GFH9eE1Qi@W5j2
+IX@PO;UcD0]L]TER<AFe1z0
+R2
+R0
+R3
+R4
+R5
+L0 31
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@up@down
+vUpDown_vlg_vec_tst
+R1
+!i10b 1
+!s100 Hj[j9i;4>Rf<QHUeg_9S70
+I6zibeW;dBQg_bQlzcK5DX3
+R2
+R0
+w1544165879
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+L0 29
+R6
+r1
+!s85 0
+31
+R7
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R10
+R11
+n@up@down_vlg_vec_tst

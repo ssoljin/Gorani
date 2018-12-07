@@ -1,0 +1,29 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "UP",
+					"strict" : false
+				},
+				{
+					"name" : "DOWN",
+					"strict" : false
+				},
+				{
+					"name" : "UPBOTTON",
+					"strict" : false
+				},
+				{
+					"name" : "POWER",
+					"strict" : false
+				},
+				{
+					"name" : "DOWNBUTTON",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

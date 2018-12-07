@@ -1,0 +1,205 @@
+// Copyright (C) 2018  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus Prime"
+// VERSION "Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition"
+
+// DATE "12/07/2018 15:58:02"
+
+// 
+// Device: Altera EP4CGX15BF14C6 Package FBGA169
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module UpDown (
+	UP,
+	UPBOTTON,
+	POWER,
+	DOWNBUTTON,
+	DOWN);
+output 	UP;
+input 	UPBOTTON;
+input 	POWER;
+input 	DOWNBUTTON;
+output 	DOWN;
+
+// Design Ports Information
+// UP	=>  Location: PIN_J13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// DOWN	=>  Location: PIN_G10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// UPBOTTON	=>  Location: PIN_K13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// POWER	=>  Location: PIN_H12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// DOWNBUTTON	=>  Location: PIN_H10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+wire \UP~output_o ;
+wire \DOWN~output_o ;
+wire \UPBOTTON~input_o ;
+wire \DOWNBUTTON~input_o ;
+wire \POWER~input_o ;
+wire \inst5~combout ;
+wire \inst6~combout ;
+
+
+hard_block auto_generated_inst(
+	.devpor(devpor),
+	.devclrn(devclrn),
+	.devoe(devoe));
+
+// Location: IOOBUF_X33_Y15_N9
+cycloneiv_io_obuf \UP~output (
+	.i(\inst5~combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\UP~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \UP~output .bus_hold = "false";
+defparam \UP~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X33_Y22_N9
+cycloneiv_io_obuf \DOWN~output (
+	.i(\inst6~combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\DOWN~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \DOWN~output .bus_hold = "false";
+defparam \DOWN~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOIBUF_X33_Y15_N1
+cycloneiv_io_ibuf \UPBOTTON~input (
+	.i(UPBOTTON),
+	.ibar(gnd),
+	.o(\UPBOTTON~input_o ));
+// synopsys translate_off
+defparam \UPBOTTON~input .bus_hold = "false";
+defparam \UPBOTTON~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X33_Y14_N1
+cycloneiv_io_ibuf \DOWNBUTTON~input (
+	.i(DOWNBUTTON),
+	.ibar(gnd),
+	.o(\DOWNBUTTON~input_o ));
+// synopsys translate_off
+defparam \DOWNBUTTON~input .bus_hold = "false";
+defparam \DOWNBUTTON~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X33_Y14_N8
+cycloneiv_io_ibuf \POWER~input (
+	.i(POWER),
+	.ibar(gnd),
+	.o(\POWER~input_o ));
+// synopsys translate_off
+defparam \POWER~input .bus_hold = "false";
+defparam \POWER~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LCCOMB_X30_Y17_N24
+cycloneiv_lcell_comb inst5(
+// Equation(s):
+// \inst5~combout  = (\UPBOTTON~input_o  & (!\DOWNBUTTON~input_o  & \POWER~input_o ))
+
+	.dataa(\UPBOTTON~input_o ),
+	.datab(\DOWNBUTTON~input_o ),
+	.datac(\POWER~input_o ),
+	.datad(gnd),
+	.cin(gnd),
+	.combout(\inst5~combout ),
+	.cout());
+// synopsys translate_off
+defparam inst5.lut_mask = 16'h2020;
+defparam inst5.sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X30_Y17_N2
+cycloneiv_lcell_comb inst6(
+// Equation(s):
+// \inst6~combout  = (!\UPBOTTON~input_o  & (\DOWNBUTTON~input_o  & \POWER~input_o ))
+
+	.dataa(\UPBOTTON~input_o ),
+	.datab(\DOWNBUTTON~input_o ),
+	.datac(\POWER~input_o ),
+	.datad(gnd),
+	.cin(gnd),
+	.combout(\inst6~combout ),
+	.cout());
+// synopsys translate_off
+defparam inst6.lut_mask = 16'h4040;
+defparam inst6.sum_lutc_input = "datac";
+// synopsys translate_on
+
+assign UP = \UP~output_o ;
+
+assign DOWN = \DOWN~output_o ;
+
+endmodule
+
+module hard_block (
+
+	devpor,
+	devclrn,
+	devoe);
+
+// Design Ports Information
+// ~ALTERA_NCEO~	=>  Location: PIN_N5,	 I/O Standard: 2.5 V,	 Current Strength: 16mA
+// ~ALTERA_DATA0~	=>  Location: PIN_A5,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ~ALTERA_ASDO~	=>  Location: PIN_B5,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ~ALTERA_NCSO~	=>  Location: PIN_C5,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ~ALTERA_DCLK~	=>  Location: PIN_A4,	 I/O Standard: 2.5 V,	 Current Strength: Default
+
+input 	devpor;
+input 	devclrn;
+input 	devoe;
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+wire \~ALTERA_DATA0~~padout ;
+wire \~ALTERA_ASDO~~padout ;
+wire \~ALTERA_NCSO~~padout ;
+wire \~ALTERA_DATA0~~ibuf_o ;
+wire \~ALTERA_ASDO~~ibuf_o ;
+wire \~ALTERA_NCSO~~ibuf_o ;
+
+
+endmodule
