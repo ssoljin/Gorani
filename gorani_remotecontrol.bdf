@@ -1300,28 +1300,12 @@ refer to the applicable agreement for further details.
 	(pt 128 272)
 )
 (connector
-	(pt 112 216)
-	(pt 112 272)
-)
-(connector
 	(pt 104 200)
 	(pt 112 200)
 )
 (connector
 	(pt 128 216)
 	(pt 128 160)
-)
-(connector
-	(pt 104 216)
-	(pt 112 216)
-)
-(connector
-	(pt 112 216)
-	(pt 128 216)
-)
-(connector
-	(pt 112 200)
-	(pt 112 160)
 )
 (connector
 	(pt 56 96)
@@ -1839,10 +1823,21 @@ refer to the applicable agreement for further details.
 	(pt 1136 568)
 	(pt 1136 552)
 )
+(connector
+	(pt 104 216)
+	(pt 128 216)
+)
+(connector
+	(pt 112 160)
+	(pt 112 200)
+)
+(connector
+	(pt 112 200)
+	(pt 112 272)
+)
 (junction (pt 328 232))
 (junction (pt 368 232))
 (junction (pt 408 232))
-(junction (pt 112 216))
 (junction (pt 208 200))
 (junction (pt 248 208))
 (junction (pt 104 96))
@@ -1867,3 +1862,4 @@ refer to the applicable agreement for further details.
 (junction (pt 856 -176))
 (junction (pt 856 536))
 (junction (pt 704 576))
+(junction (pt 112 200))
