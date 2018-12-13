@@ -10,8 +10,8 @@ body는 상체 제어 모듈임. 총 두개의 클럭사용(1초, 짧은 것)
 input: neck, body, head
 clock(일반적인것), clock_1sec(주기가 1초)
 high(1), low(0)
-output: neck_output(목유압)(1작동, 2멈춤), head_output(머리 두드리기)(1작동,2멈춤), body_output(몸 두드리기)(1작동, 2멈춤), 
-rail_move(레일 움직이기)(1레일 상승, 0레일 하강, 정지는 1,0반복), rail_output(레일 지압 가동 및 레일 작동)(1작동, 2멈춤)
+output: neck_output(목유압)(1작동, 0멈춤), head_output(머리 두드리기)(1작동,0멈춤), body_output(몸 두드리기)(1작동, 0멈춤), 
+rail_move(레일 움직이기)(1레일 상승, 0레일 하강, 정지는 1,0반복), rail_output(레일 지압 가동 및 레일 작동)(1작동, 0멈춤)
 
 
 neck == 1 이면 레일을 목끝까지 올려 (목끝<->목시작) 반복해서 움직임.(움직이면서 레일 지압 가동), 목 유압 가동
