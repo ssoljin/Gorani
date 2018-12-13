@@ -1214,20 +1214,8 @@ refer to the applicable agreement for further details.
 	(pt 1200 752)
 )
 (connector
-	(pt 1040 632)
-	(pt 1008 632)
-)
-(connector
-	(pt 1008 632)
-	(pt 1008 720)
-)
-(connector
 	(pt 1264 760)
 	(pt 1264 720)
-)
-(connector
-	(pt 1264 720)
-	(pt 1008 720)
 )
 (connector
 	(pt 1032 496)
@@ -1424,6 +1412,18 @@ refer to the applicable agreement for further details.
 (connector
 	(pt 1408 384)
 	(pt 1408 544)
+)
+(connector
+	(pt 1040 632)
+	(pt 1000 632)
+)
+(connector
+	(pt 1000 632)
+	(pt 1000 720)
+)
+(connector
+	(pt 1264 720)
+	(pt 1000 720)
 )
 (junction (pt 1032 648))
 (junction (pt 1032 784))
