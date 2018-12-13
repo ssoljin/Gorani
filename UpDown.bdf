@@ -37,9 +37,9 @@ refer to the applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 320 248 488 264)
+	(rect 320 392 488 408)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "UPBOTTON" (rect 5 0 61 17)(font "Intel Clear" ))
+	(text "DOWNBUTTON" (rect 5 0 79 17)(font "Intel Clear" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -53,9 +53,9 @@ refer to the applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 320 392 488 408)
+	(rect 320 248 488 264)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "DOWNBUTTON" (rect 5 0 79 17)(font "Intel Clear" ))
+	(text "UPBUTTON" (rect 5 0 61 17)(font "Intel Clear" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
